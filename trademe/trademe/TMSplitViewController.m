@@ -1,27 +1,28 @@
 //
-//  ViewController.m
+//  TMSplitViewController.m
 //  trademe
 //
 //  Created by David Lashkhi on 09/04/16.
 //  Copyright © 2016 David Lashkhi. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TMSplitViewController.h"
 
-@interface ViewController ()
+@interface TMSplitViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TMSplitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

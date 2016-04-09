@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		BBDDE76C1CB8FD7000572AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE76B1CB8FD7000572AC0 /* main.m */; };
 		BBDDE76F1CB8FD7000572AC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */; };
-		BBDDE7721CB8FD7000572AC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7711CB8FD7000572AC0 /* ViewController.m */; };
 		BBDDE7751CB8FD7000572AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7731CB8FD7000572AC0 /* Main.storyboard */; };
 		BBDDE7771CB8FD7000572AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7761CB8FD7000572AC0 /* Assets.xcassets */; };
 		BBDDE77A1CB8FD7000572AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7781CB8FD7000572AC0 /* LaunchScreen.storyboard */; };
+		BBDDE7831CB90AE800572AC0 /* TMSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */; };
+		BBDDE7861CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7851CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m */; };
+		BBDDE7891CB9112300572AC0 /* TMNetworkDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7881CB9112300572AC0 /* TMNetworkDataManager.m */; };
+		BBDDE78D1CB921D600572AC0 /* TMDataSerializationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE78C1CB921D600572AC0 /* TMDataSerializationManager.m */; };
+		BBDDE7941CB925D700572AC0 /* TMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7931CB925D700572AC0 /* TMCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,20 @@
 		BBDDE76B1CB8FD7000572AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BBDDE76D1CB8FD7000572AC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BBDDE7701CB8FD7000572AC0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BBDDE7711CB8FD7000572AC0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BBDDE7741CB8FD7000572AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBDDE7761CB8FD7000572AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDDE7791CB8FD7000572AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDDE77B1CB8FD7000572AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDDE7811CB90AE800572AC0 /* TMSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSplitViewController.h; sourceTree = "<group>"; };
+		BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSplitViewController.m; sourceTree = "<group>"; };
+		BBDDE7841CB90E6F00572AC0 /* TMCategoriesMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCategoriesMainTableViewController.h; sourceTree = "<group>"; };
+		BBDDE7851CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCategoriesMainTableViewController.m; sourceTree = "<group>"; };
+		BBDDE7871CB9112300572AC0 /* TMNetworkDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkDataManager.h; sourceTree = "<group>"; };
+		BBDDE7881CB9112300572AC0 /* TMNetworkDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkDataManager.m; sourceTree = "<group>"; };
+		BBDDE78B1CB921D600572AC0 /* TMDataSerializationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataSerializationManager.h; sourceTree = "<group>"; };
+		BBDDE78C1CB921D600572AC0 /* TMDataSerializationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataSerializationManager.m; sourceTree = "<group>"; };
+		BBDDE7921CB925D700572AC0 /* TMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCategory.h; sourceTree = "<group>"; };
+		BBDDE7931CB925D700572AC0 /* TMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,12 @@
 			children = (
 				BBDDE76D1CB8FD7000572AC0 /* AppDelegate.h */,
 				BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */,
-				BBDDE7701CB8FD7000572AC0 /* ViewController.h */,
-				BBDDE7711CB8FD7000572AC0 /* ViewController.m */,
+				BBDDE7911CB9240700572AC0 /* Model */,
+				BBDDE78A1CB9119400572AC0 /* Network & Data */,
+				BBDDE7811CB90AE800572AC0 /* TMSplitViewController.h */,
+				BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */,
+				BBDDE7841CB90E6F00572AC0 /* TMCategoriesMainTableViewController.h */,
+				BBDDE7851CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m */,
 				BBDDE7731CB8FD7000572AC0 /* Main.storyboard */,
 				BBDDE7761CB8FD7000572AC0 /* Assets.xcassets */,
 				BBDDE7781CB8FD7000572AC0 /* LaunchScreen.storyboard */,
@@ -77,6 +93,26 @@
 				BBDDE76B1CB8FD7000572AC0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBDDE78A1CB9119400572AC0 /* Network & Data */ = {
+			isa = PBXGroup;
+			children = (
+				BBDDE7871CB9112300572AC0 /* TMNetworkDataManager.h */,
+				BBDDE7881CB9112300572AC0 /* TMNetworkDataManager.m */,
+				BBDDE78B1CB921D600572AC0 /* TMDataSerializationManager.h */,
+				BBDDE78C1CB921D600572AC0 /* TMDataSerializationManager.m */,
+			);
+			name = "Network & Data";
+			sourceTree = "<group>";
+		};
+		BBDDE7911CB9240700572AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBDDE7921CB925D700572AC0 /* TMCategory.h */,
+				BBDDE7931CB925D700572AC0 /* TMCategory.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDDE7721CB8FD7000572AC0 /* ViewController.m in Sources */,
 				BBDDE76F1CB8FD7000572AC0 /* AppDelegate.m in Sources */,
+				BBDDE7831CB90AE800572AC0 /* TMSplitViewController.m in Sources */,
+				BBDDE7941CB925D700572AC0 /* TMCategory.m in Sources */,
 				BBDDE76C1CB8FD7000572AC0 /* main.m in Sources */,
+				BBDDE78D1CB921D600572AC0 /* TMDataSerializationManager.m in Sources */,
+				BBDDE7891CB9112300572AC0 /* TMNetworkDataManager.m in Sources */,
+				BBDDE7861CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +342,7 @@
 				BBDDE7801CB8FD7000572AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

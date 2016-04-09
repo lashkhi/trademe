@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  TMCategory.m
 //  trademe
 //
 //  Created by David Lashkhi on 09/04/16.
 //  Copyright © 2016 David Lashkhi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TMCategory.h"
 
-@interface ViewController : UIViewController
-
+@implementation TMCategory
 
 @end
-
