@@ -62,6 +62,7 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.shouldCollapseDetailViewController = false;
+    
 }
 
 

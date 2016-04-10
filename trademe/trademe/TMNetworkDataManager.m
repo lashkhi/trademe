@@ -45,10 +45,6 @@ static NSString * const urlString = @"https://api.tmsandbox.co.nz/v1/Categories.
             NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             self.serializationManger = [[TMDataSerializationManager alloc] initWithDictionary:jsonDictionary];
             NSArray *baseCategories = [self.serializationManger fetchBaseCategories];
-           // NSArray *sectors = [self createSectorsFromSectoresArray:sectorsJson];
-           // NSArray *sortedSectors = [sectors sortedArrayUsingComparator:^(Sector* a, Sector* b) {
-           //     return [[a sectorName] compare:[b sectorName] options:NSCaseInsensitiveSearch];
-           // }];
             success (baseCategories);
         } else if (error) {
             //handle error

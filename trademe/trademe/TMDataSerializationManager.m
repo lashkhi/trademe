@@ -30,10 +30,26 @@
     self.baseCategories = [NSMutableArray new];
     for (NSDictionary *baseCategory in categoriesArray) {
         TMCategory * category = [TMCategory new];
-        category.name = [baseCategory objectForKey:@"Name"];
-        
+        category.name = baseCategory[@"Name"];
+        category.path = baseCategory[@"Path"];
         [self.baseCategories addObject:category];
+        [self createSubcategoriesForBaseCategory:category withSubcategories:baseCategory[@"Subcategories"]];
     }
+}
+
+- (void)createSubcategoriesForBaseCategory:(TMCategory *)category withSubcategories:(NSArray *)subcategories {
+    NSMutableArray *tempSubcategoriesArray = [NSMutableArray new];
+    for (NSDictionary *subcategoryDict in subcategories) {
+        TMCategory * subcategory = [TMCategory new];
+        subcategory.name = subcategoryDict[@"Name"];
+        subcategory.path = subcategoryDict[@"Path"];
+        if (subcategoryDict[@"Subcategories"]) {
+            [self createSubcategoriesForBaseCategory:subcategory withSubcategories:subcategoryDict[@"Subcategories"]];
+        }
+        [tempSubcategoriesArray addObject:category];
+    }
+    category.subcategories = tempSubcategoriesArray;
+    
 }
 
 - (NSArray *)fetchBaseCategories {
