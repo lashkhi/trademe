@@ -64,15 +64,19 @@ static NSString * const reuseIdentifier = @"SubcategoriesTableViewCell";
     if (category.subcategories.count > 0) {
         [self createSubcategoriesTableViewControllerForCategory:category];
     } else {
+        UIViewController *vcToShow;
         TMListingTableViewController *listingTVC;
         if (self.splitViewController.viewControllers.count > 1) {
-            listingTVC = [self.splitViewController.viewControllers lastObject];
+            UINavigationController *navController = [self.splitViewController.viewControllers lastObject];
+            listingTVC = (TMListingTableViewController *)navController.topViewController;
+            vcToShow = navController;
         } else {
             listingTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ListingTVC"];
+            vcToShow = listingTVC;
         }
         [listingTVC injectCategory:category];
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        [self.splitViewController showDetailViewController:listingTVC sender:nil];
+        [self.splitViewController showDetailViewController:vcToShow sender:nil];
     }
     
 }

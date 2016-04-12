@@ -10,6 +10,7 @@
 #import "TMCategory.h"
 #import "TMListing.h"
 #import "TMNetworkDataManager.h"
+#import "TMListingDetailsViewController.h"
 
 
 @interface TMListingTableViewController ()
@@ -93,6 +94,16 @@ static NSString * const reuseIdentifier = @"ListTableViewCell";
         });
     }
     return cell;
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TMListingDetailsViewController *listingDetailsVC = [segue destinationViewController];
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSString *keyString = [NSString stringWithFormat:@"listing-%ld", (long)path.row];
+    TMListing *selectedListing = self.listingsArray[path.row];
+    listingDetailsVC.listing = selectedListing;
+    listingDetailsVC.imageInject = [self.cache objectForKey:keyString];
 }
 
 @end

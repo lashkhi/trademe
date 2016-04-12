@@ -75,6 +75,8 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
 }
 
 
+#pragma mark - Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TMSubcategoriesTableViewController *subcategoriesTableViewController = [segue destinationViewController];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
@@ -94,13 +96,17 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     TMListingTableViewController *listingTVC;
+    UIViewController *vcToShow;
     if (self.splitViewController.viewControllers.count > 1) {
-        listingTVC = [self.splitViewController.viewControllers lastObject];
+        UINavigationController *navController = [self.splitViewController.viewControllers lastObject];
+        listingTVC = (TMListingTableViewController *)navController.topViewController;
+        vcToShow = navController;
     } else {
         listingTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ListingTVC"];
+        vcToShow = listingTVC;
     }
     [listingTVC searchFomKeywords:searchBar.text];
-    [self.splitViewController showDetailViewController:listingTVC sender:nil];
+    [self.splitViewController showDetailViewController:vcToShow sender:nil];
 }
 
 @end

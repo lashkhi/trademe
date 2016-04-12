@@ -10,6 +10,7 @@
 		BB8EEC631CBCE4A600B3D7B3 /* TMListing.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8EEC621CBCE4A600B3D7B3 /* TMListing.m */; };
 		BBA0EBC11CBA714000A94B7A /* TMSubcategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA0EBC01CBA714000A94B7A /* TMSubcategoriesTableViewController.m */; };
 		BBA0EBC41CBA872700A94B7A /* TMListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA0EBC31CBA872700A94B7A /* TMListingTableViewController.m */; };
+		BBB830261CBD753D00569FEB /* TMListingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB830251CBD753D00569FEB /* TMListingDetailsViewController.m */; };
 		BBDDE76C1CB8FD7000572AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE76B1CB8FD7000572AC0 /* main.m */; };
 		BBDDE76F1CB8FD7000572AC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */; };
 		BBDDE7751CB8FD7000572AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7731CB8FD7000572AC0 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 		BBA0EBC01CBA714000A94B7A /* TMSubcategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSubcategoriesTableViewController.m; sourceTree = "<group>"; };
 		BBA0EBC21CBA872700A94B7A /* TMListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListingTableViewController.h; sourceTree = "<group>"; };
 		BBA0EBC31CBA872700A94B7A /* TMListingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListingTableViewController.m; sourceTree = "<group>"; };
+		BBB830241CBD753D00569FEB /* TMListingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMListingDetailsViewController.h; sourceTree = "<group>"; };
+		BBB830251CBD753D00569FEB /* TMListingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMListingDetailsViewController.m; sourceTree = "<group>"; };
 		BBDDE7671CB8FD7000572AC0 /* trademe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trademe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDDE76B1CB8FD7000572AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BBDDE76D1CB8FD7000572AC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */,
 				BBDDE7911CB9240700572AC0 /* Model */,
 				BBDDE78A1CB9119400572AC0 /* Network & Data */,
+				BBB830241CBD753D00569FEB /* TMListingDetailsViewController.h */,
+				BBB830251CBD753D00569FEB /* TMListingDetailsViewController.m */,
 				BBA0EBC21CBA872700A94B7A /* TMListingTableViewController.h */,
 				BBA0EBC31CBA872700A94B7A /* TMListingTableViewController.m */,
 				BBA0EBBF1CBA714000A94B7A /* TMSubcategoriesTableViewController.h */,
@@ -201,6 +206,7 @@
 				BBA0EBC41CBA872700A94B7A /* TMListingTableViewController.m in Sources */,
 				BBDDE78D1CB921D600572AC0 /* TMDataSerializationManager.m in Sources */,
 				BBDDE7891CB9112300572AC0 /* TMNetworkDataManager.m in Sources */,
+				BBB830261CBD753D00569FEB /* TMListingDetailsViewController.m in Sources */,
 				BB8EEC631CBCE4A600B3D7B3 /* TMListing.m in Sources */,
 				BBDDE7861CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m in Sources */,
 				BBA0EBC11CBA714000A94B7A /* TMSubcategoriesTableViewController.m in Sources */,
