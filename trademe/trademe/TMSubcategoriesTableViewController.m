@@ -69,7 +69,6 @@ static NSString * const reuseIdentifier = @"SubcategoriesTableViewCell";
             listingTVC = [self.splitViewController.viewControllers lastObject];
         } else {
             listingTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ListingTVC"];
-
         }
         [listingTVC injectCategory:category];
         [tableView deselectRowAtIndexPath:indexPath animated:YES];

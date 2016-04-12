@@ -54,7 +54,6 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
 - (void)fetchCategoriesWithSuccess:(void (^)(NSArray * categories))success failure:(void (^)(NSError *error))failure {
     
     NSURL *url = [NSURL URLWithString:urlString];
-    
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     self.dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -72,7 +71,7 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
 
 - (void)fetchListingsForParameter:(NSString *)parameter isSearchByKeywords:(BOOL)isKeywords andCompletionBlock:(void (^)(NSArray * listings))success failure:(void (^)(NSError *error))failure {
     
-    NSMutableString *tempPath;
+    NSMutableString *tempPath = [NSMutableString new];
     if (isKeywords) {
         tempPath = [listingStringSearchByKeywords mutableCopy];
     } else {
@@ -80,9 +79,7 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
     }
     [tempPath appendString:parameter];
     NSURL *url = [NSURL URLWithString:tempPath];
-
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[self sessionConfigurationForAuthRequests]];
-    
     self.dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];

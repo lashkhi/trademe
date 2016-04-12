@@ -15,7 +15,6 @@
 		BBDDE7751CB8FD7000572AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7731CB8FD7000572AC0 /* Main.storyboard */; };
 		BBDDE7771CB8FD7000572AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7761CB8FD7000572AC0 /* Assets.xcassets */; };
 		BBDDE77A1CB8FD7000572AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDDE7781CB8FD7000572AC0 /* LaunchScreen.storyboard */; };
-		BBDDE7831CB90AE800572AC0 /* TMSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */; };
 		BBDDE7861CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7851CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m */; };
 		BBDDE7891CB9112300572AC0 /* TMNetworkDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE7881CB9112300572AC0 /* TMNetworkDataManager.m */; };
 		BBDDE78D1CB921D600572AC0 /* TMDataSerializationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDE78C1CB921D600572AC0 /* TMDataSerializationManager.m */; };
@@ -37,8 +36,6 @@
 		BBDDE7761CB8FD7000572AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDDE7791CB8FD7000572AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDDE77B1CB8FD7000572AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBDDE7811CB90AE800572AC0 /* TMSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSplitViewController.h; sourceTree = "<group>"; };
-		BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSplitViewController.m; sourceTree = "<group>"; };
 		BBDDE7841CB90E6F00572AC0 /* TMCategoriesMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCategoriesMainTableViewController.h; sourceTree = "<group>"; };
 		BBDDE7851CB90E6F00572AC0 /* TMCategoriesMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCategoriesMainTableViewController.m; sourceTree = "<group>"; };
 		BBDDE7871CB9112300572AC0 /* TMNetworkDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkDataManager.h; sourceTree = "<group>"; };
@@ -83,8 +80,6 @@
 				BBDDE76E1CB8FD7000572AC0 /* AppDelegate.m */,
 				BBDDE7911CB9240700572AC0 /* Model */,
 				BBDDE78A1CB9119400572AC0 /* Network & Data */,
-				BBDDE7811CB90AE800572AC0 /* TMSplitViewController.h */,
-				BBDDE7821CB90AE800572AC0 /* TMSplitViewController.m */,
 				BBA0EBC21CBA872700A94B7A /* TMListingTableViewController.h */,
 				BBA0EBC31CBA872700A94B7A /* TMListingTableViewController.m */,
 				BBA0EBBF1CBA714000A94B7A /* TMSubcategoriesTableViewController.h */,
@@ -201,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDDE76F1CB8FD7000572AC0 /* AppDelegate.m in Sources */,
-				BBDDE7831CB90AE800572AC0 /* TMSplitViewController.m in Sources */,
 				BBDDE7941CB925D700572AC0 /* TMCategory.m in Sources */,
 				BBDDE76C1CB8FD7000572AC0 /* main.m in Sources */,
 				BBA0EBC41CBA872700A94B7A /* TMListingTableViewController.m in Sources */,

@@ -80,7 +80,6 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     TMCategory *selectedCategory = self.baseCategories[path.row];
     subcategoriesTableViewController.parentCategory = selectedCategory;
-    
 }
 
 
