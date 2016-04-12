@@ -14,4 +14,7 @@
 
 - (NSArray *)fetchBaseCategories;
 
+- (NSArray *)createListingsFromListingsDictionary:(NSDictionary *)listingsDictionary;
+
+
 @end

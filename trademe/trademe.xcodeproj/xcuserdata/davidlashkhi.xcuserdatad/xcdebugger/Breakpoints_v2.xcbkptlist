@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "trademe/TMDataSerializationManager.m"
-            timestampString = "481897207.019807"
+            filePath = "trademe/TMListingTableViewController.m"
+            timestampString = "482154292.754327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-createBaseCategoriesFromCategoriesArray:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "trademe/TMDataSerializationManager.m"
-            timestampString = "481977646.765348"
+            filePath = "trademe/TMListingTableViewController.m"
+            timestampString = "482154344.164169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-createBaseCategoriesFromCategoriesArray:"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "trademe/TMDataSerializationManager.m"
-            timestampString = "481979882.869585"
+            filePath = "trademe/TMNetworkDataManager.m"
+            timestampString = "482154347.859802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-createSubcategoriesForBaseCategory:withSubcategories:"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-fetchImageFromUrl:onDidLoad:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "trademe/TMDataSerializationManager.m"
-            timestampString = "481979882.869585"
+            filePath = "trademe/TMNetworkDataManager.m"
+            timestampString = "482154351.611519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-createSubcategoriesForBaseCategory:withSubcategories:"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-fetchImageFromUrl:onDidLoad:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "trademe/TMListingTableViewController.m"
+            timestampString = "482154435.853914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

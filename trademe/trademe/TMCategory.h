@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSString *number;
 @property (nonatomic, strong) NSArray *subcategories;
 
 @end

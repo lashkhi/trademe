@@ -9,7 +9,8 @@
 #import "TMCategoriesMainTableViewController.h"
 #import "TMNetworkDataManager.h"
 #import "TMCategory.h"
-
+#import "TMSubcategoriesTableViewController.h"
+#import "TMListingTableViewController.h"
 
 @interface TMCategoriesMainTableViewController ()
 
@@ -68,20 +69,25 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
     TMCategory *baseCategory = self.baseCategories[indexPath.row];
-    
     cell.textLabel.text = baseCategory.name;
-    
     return cell;
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TMSubcategoriesTableViewController *subcategoriesTableViewController = [segue destinationViewController];
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    TMCategory *selectedCategory = self.baseCategories[path.row];
+    subcategoriesTableViewController.parentCategory = selectedCategory;
+    
+}
 
 
 #pragma mark - UISplitViewControllerDelegate
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    //self.listingVC = (TMListingTableViewController *) secondaryViewController;
     return self.shouldCollapseDetailViewController;
 }
 
