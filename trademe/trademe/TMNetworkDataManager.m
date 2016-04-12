@@ -12,6 +12,7 @@
 @interface TMNetworkDataManager ()
 
 @property (nonatomic, strong) TMDataSerializationManager *serializationManger;
+@property (nonatomic, strong) NSURLSessionDataTask *dataTask;
 
 @end
 
@@ -20,6 +21,7 @@
 
 static NSString * const urlString = @"https://api.tmsandbox.co.nz/v1/Categories.json";
 static NSString * const listingString = @"https://api.tmsandbox.co.nz/v1/Search/General.json?category=";
+static NSString * const listingStringSearchByKeywords = @"https://api.tmsandbox.co.nz/v1/Search/General.json?search_string=";
 static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listings/";
 
 + (instancetype)sharedInstance {
@@ -47,7 +49,6 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
                                               @"Authorization": authHeader
                                               }];
     return sessionConfig;
-
 }
 
 - (void)fetchCategoriesWithSuccess:(void (^)(NSArray * categories))success failure:(void (^)(NSError *error))failure {
@@ -56,7 +57,7 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    self.dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             self.serializationManger = [[TMDataSerializationManager alloc] initWithDictionary:jsonDictionary];
@@ -66,19 +67,23 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
             //handle error
         }
     }];
-    [dataTask resume];
-    
+    [self.dataTask resume];
 }
 
-- (void)fetchListingsForCategoryPath:(NSString *)path andCompletionBlock:(void (^)(NSArray * listings))success failure:(void (^)(NSError *error))failure {
-    NSString *newPath = [path substringToIndex:[path length]-1];
-    NSMutableString *tempPath = [listingString mutableCopy];
-    [tempPath appendString:newPath];
-    NSURL *url = [NSURL URLWithString:tempPath];
+- (void)fetchListingsForParameter:(NSString *)parameter isSearchByKeywords:(BOOL)isKeywords andCompletionBlock:(void (^)(NSArray * listings))success failure:(void (^)(NSError *error))failure {
     
+    NSMutableString *tempPath;
+    if (isKeywords) {
+        tempPath = [listingStringSearchByKeywords mutableCopy];
+    } else {
+        tempPath = [listingString mutableCopy];
+    }
+    [tempPath appendString:parameter];
+    NSURL *url = [NSURL URLWithString:tempPath];
+
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[self sessionConfigurationForAuthRequests]];
     
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    self.dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
             NSArray *listingsArray = [self.serializationManger createListingsFromListingsDictionary:jsonDictionary];
@@ -87,36 +92,9 @@ static NSString * const listingDetails = @"https://api.tmsandbox.co.nz/v1/Listin
             //handle error
         }
     }];
-    [dataTask resume];
-
+    [self.dataTask resume];
 }
 
-- (void)fetchListingsWith:(NSDictionary *)listing andCompletionBlock:(void (^)(NSDictionary * listings))success failure:(void (^)(NSError *error))failure {
-    
-    NSDictionary *list = [listing[@"List"] firstObject];
-    NSString *listingID = list[@"ListingId"];
-    NSMutableString *tempPath = [listingDetails mutableCopy];
-    [tempPath appendString:[NSString stringWithFormat:@"%@.json", listingID]];
-    
-    NSURL *url = [NSURL URLWithString:tempPath];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[self sessionConfigurationForAuthRequests]];
-    
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data) {
-            NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-            //self.serializationManger = [[TMDataSerializationManager alloc] initWithDictionary:jsonDictionary];
-            success (jsonDictionary);
-        } else if (error) {
-            //handle error
-        } else {
-            //handle unknown error
-        }
-        
-    }];
-    [dataTask resume];
-
-}
 
 #pragma mark Image downloader
 

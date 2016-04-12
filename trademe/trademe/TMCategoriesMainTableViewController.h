@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 @class TMListingTableViewController;
 
-@interface TMCategoriesMainTableViewController : UITableViewController <UISplitViewControllerDelegate>
+@interface TMCategoriesMainTableViewController : UITableViewController <UISplitViewControllerDelegate, UISearchBarDelegate>
 
 @end

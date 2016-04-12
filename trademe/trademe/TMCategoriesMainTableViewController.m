@@ -91,4 +91,17 @@ static NSString * const reuseIdentifier = @"CategoriesTableViewCell";
     return self.shouldCollapseDetailViewController;
 }
 
+#pragma mark - SearchBar delegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    TMListingTableViewController *listingTVC;
+    if (self.splitViewController.viewControllers.count > 1) {
+        listingTVC = [self.splitViewController.viewControllers lastObject];
+    } else {
+        listingTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ListingTVC"];
+    }
+    [listingTVC searchFomKeywords:searchBar.text];
+    [self.splitViewController showDetailViewController:listingTVC sender:nil];
+}
+
 @end

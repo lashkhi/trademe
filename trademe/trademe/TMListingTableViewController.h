@@ -13,4 +13,6 @@
 
 - (void)injectCategory:(TMCategory *)category;
 
+- (void)searchFomKeywords:(NSString *)keywords;
+
 @end

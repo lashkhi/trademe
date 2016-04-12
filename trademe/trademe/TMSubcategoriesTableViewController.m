@@ -68,9 +68,7 @@ static NSString * const reuseIdentifier = @"SubcategoriesTableViewCell";
         if (self.splitViewController.viewControllers.count > 1) {
             listingTVC = [self.splitViewController.viewControllers lastObject];
         } else {
-            UINavigationController *navigationController = [self.splitViewController.viewControllers firstObject];
-            TMCategoriesMainTableViewController *baseViewController = [navigationController.viewControllers firstObject];
-            //TMListingTableViewController *listingVC = baseViewController.listingVC;
+            listingTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ListingTVC"];
 
         }
         [listingTVC injectCategory:category];

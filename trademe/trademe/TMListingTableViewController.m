@@ -34,8 +34,16 @@ static NSString * const reuseIdentifier = @"ListTableViewCell";
 
 - (void)injectCategory:(TMCategory *)category {
     self.category = category;
+    [self fetchListingsWithParameters:self.category.number isKeyword:NO];
+}
+
+- (void)searchFomKeywords:(NSString *)keywords{
+    [self fetchListingsWithParameters:keywords isKeyword:YES];
+}
+
+- (void)fetchListingsWithParameters:(NSString *)parameter isKeyword:(BOOL)isKeyword {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [[TMNetworkDataManager sharedInstance] fetchListingsForCategoryPath:(NSString *)self.category.number andCompletionBlock:^(NSArray *listings) {
+        [[TMNetworkDataManager sharedInstance] fetchListingsForParameter:parameter isSearchByKeywords:isKeyword andCompletionBlock:^(NSArray *listings) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.listingsArray = listings;
                 [self.tableView reloadData];

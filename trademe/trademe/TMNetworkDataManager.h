@@ -20,6 +20,6 @@ typedef void (^ImageDidLoadBlock)(UIImage *image);
 
 - (void)fetchCategoriesWithSuccess:(void (^)(NSArray * categories))success failure:(void (^)(NSError *error))failure;
 
-- (void)fetchListingsForCategoryPath:(NSString *)path andCompletionBlock:(void (^)(NSArray * listings))success failure:(void (^)(NSError *error))failure;
+- (void)fetchListingsForParameter:(NSString *)parameter isSearchByKeywords:(BOOL)isKeywords andCompletionBlock:(void (^)(NSArray * listings))success failure:(void (^)(NSError *error))failure;
 
 @end
